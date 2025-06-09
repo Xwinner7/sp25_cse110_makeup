@@ -2,34 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Globocorp GPT Genie</title>
-  <link rel="stylesheet" href="styles.css" />
-  <noscript>
-    <div class="js-warning">This app requires JavaScript to function properly.</div>
-  </noscript>
+  <style>
+    body {
+      background-color: #3a4a5a;
+      font-family: sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: red;
+      margin-top: 40px;
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-style: italic;
+      color: #ccc;
+      margin-top: 0;
+    }
+
+    .chatbox {
+      background-color: white;
+      width: 90%;
+      max-width: 600px;
+      margin-top: 30px;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .message {
+      margin: 15px 0;
+      padding: 10px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+
+    .genie {
+      background-color: #f0f0f0;
+      color: #000;
+      align-self: flex-start;
+    }
+
+    .user {
+      background-color: #cfe2ff;
+      color: #000;
+      align-self: flex-end;
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .label {
+      font-size: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .chat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-area {
+      display: flex;
+      width: 90%;
+      max-width: 600px;
+      margin: 20px 0;
+    }
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 10px 0 0 10px;
+    }
+
+    button {
+      background-color: #87bfff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <h1 class="title">Globocorp GPT Genie</h1>
-    <p class="subtitle">Tell us your wishes and all of your dreams will come true!</p>
-  </header>
+  <h1>Globocorp GPT Genie</h1>
+  <h2>Tell us your wishes and all of your dreams will come true!</h2>
 
-  <main>
-    <section class="chat-container" id="chat" aria-live="polite"></section>
-    <div class="input-container">
-      <label for="input" class="visually-hidden">Your message</label>
-      <input
-        type="text"
-        id="input"
-        class="chat-input"
-        placeholder="What are your wishes mighty customer?"
-        aria-label="Your message"
-      />
-      <button id="send-button" class="send-button" aria-label="Send">Send</button>
+  <div class="chatbox">
+    <div class="chat">
+      <div class="message genie">
+        <div class="label">GENIE</div>
+        Hello! I'm the Globocorp Genie. Your wish is my command!
+      </div>
+
+      <div class="message user">
+        <div class="label">YOU</div>
+        Give me all the points!
+      </div>
+
+      <div class="message genie">
+        <div class="label">GENIE</div>
+        Presto...100 points!
+      </div>
     </div>
-  </main>
+  </div>
 
-  <script src="app.js"></script>
+  <div class="input-area">
+    <input type="text" placeholder="What are your wishes mighty customer?" />
+    <button>Send</button>
+  </div>
 </body>
 </html>
